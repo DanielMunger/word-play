@@ -1,4 +1,4 @@
-
+var newArray = [];
 var split_sentence = function(sentence) {
 
   sentence = sentence.split(' ');
@@ -7,12 +7,14 @@ var split_sentence = function(sentence) {
 var three_or_more = function(split) {
   split.forEach(function(str) {
     if(str.length > 3){
-      alert(str);
-      // var newArray = str.map(function(st) {
-      //   return newArray;
-      // });
+
+      newArray.push(str);
+      alert(newArray);
     }
-    else;
+
+    return newArray;
+
+
   });
 };
 
@@ -27,9 +29,8 @@ $(document).ready(function() {
 
     var split = split_sentence(sentence);
 
-    alert(split);
-    three_or_more(split);
 
+    three_or_more(split);
 
     event.preventDefault();
   });
